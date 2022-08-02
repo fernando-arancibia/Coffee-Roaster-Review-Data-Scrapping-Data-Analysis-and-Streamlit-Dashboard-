@@ -1,89 +1,88 @@
-# coffee review with scrapping method
+# Analysis of coffee brands reviews through web scraping
 
 
+## Introduction
 
-Coffee Market Analisis for Top Rates doing Scrapping
+In the following data analysis project, information is extracted through the web scrapping method about reviews of different types of coffees that exist in the market. The main objective is to generate a data framework that allows to obtain information about how these reviews are structured to perform the classification of coffees.
 
-Introduction
+## Objective
 
-This project will attempt to analyze the Coffee Market according to the website coffeereview.com from the reviews of more of 1920 brand of coffees.
+- Realize data collection with scrape method of relevant information about Coffee Market for diverses brand of coffees
+- Built a data frame with the information selected.
 
-Objective
+## Methods
 
--Realize data collection with scrape method of relevant information about Coffee Market for brand of coffees
--Built a data frame with the information selected.
-
-![image](https://user-images.githubusercontent.com/84011018/127627969-00805b3e-2141-4aca-b684-79bab29a53cc.png)
-
-Methods
-
--For this project the method used is data scraping, also known as web scraping, is the process of importing information from a website into a spreadsheet or local file saved on your computer. It’s one of the most efficient ways to get data from the web, and in some cases to channel that data to another website.
-
-![image](https://user-images.githubusercontent.com/84011018/127629459-6e7567ac-774e-405c-bc14-283275856932.png)
- 
-For this project the tool used for scrape was Python and the librarie Beautifulsoup(bs4). This was my general method for scraping data, using Google Chrome, looking for selector for the information needed. As an example the data needed for scrape is refer to the image below.
-
-![image](https://user-images.githubusercontent.com/84011018/127628986-9befe917-d390-4db2-a9ac-5df55f32b77f.png)
+For this project the method used is data scraping, also known as web scraping, is the process of importing information from a website into a spreadsheet or local file saved on your computer. It’s one of the most efficient ways to get data from the web, and in some cases to channel that data to another website.
+The module/tool used for scrape was Python and the librarie Beautifulsoup(bs4), Pandas for datamanipulation and seaborn for datavisualizations. 
 
 The next step for the task was the following:
 
--Create the url to get the information using headers
--Create a function for extract the links for scrappe coffee review
--Create the function to extract the link
--Testing the information scraped for complete the scrape process.
-
-In this step of testing was improve some task like checking the link for connect to the site, extracting one review for one link and some information like the name of coffee, roaster name and rating of review.
-
-![image](https://user-images.githubusercontent.com/84011018/127633734-1453616d-737f-45b5-a7b3-ac9adf968cf0.png)
+- Create the url to get the information using headers.
+- Create a function for extract the links for scrappe coffee review.
+- Create the function to extract the link.
+- Testing the information scraped for complete the scrape process.
 
 After this test all the reviews were extracted with a total of 1920 reviews for further analysis and create the data frame.
+In this stage is analized the information for the scrapping proccess. for this task the following steps are performed in order to obtain a collection of data that is suitable for analysis:
 
-![image](https://user-images.githubusercontent.com/84011018/127634313-5f021b49-1bdb-4512-b313-e74d6bc7c9a6.png)
+- Clean and wrangling the information of the data frame ( create and drop columns, change currency for the prices of coffee).
+- Realize descriptive analisis of the information collected (RDA).
+- Builts visualizations were performed how is show in the next lines.
 
-#### In this stage is analized the information for the scrapping proccess. for this task the following steps are performed in order to obtain a collection of data that is suitable for analysis:
+## RDA and Data Visualizations
 
-#### -Clean and wrangling the information of the data frame ( create and drop columns, change currency for the prices of coffee)
-#### -Realize descriptive analisis of the information collected (RDA)
+### Percentage of coffees according to rating rank.
+
+According to the information obtained from the web scrape it is observed that the cafes are classified by rating, so it is observed that there are four classifications according to the web page. Cafes with a rating higher than 95 rating points obtain 5.4% of the total. A percentage corresponding to 73.5% places the majority of the coffee shops in the range of 92 - 95 rating points. Cafes with 90 - 92 rating points have 18.9% and <89 points 2.1%.
+
+![image](https://user-images.githubusercontent.com/84011018/182372164-ee8f1e9e-6cd9-4ea5-a00c-25b12f6a5de5.png)
 
 
-After this stage builts visualizations were performed how is show in the next lines.
 
-Count of coffees for rating
+### Distribution of coffees according to rating rank
 
-![image](https://user-images.githubusercontent.com/84011018/127635875-515da5ed-600c-46af-a40f-9ed2bb1b4a57.png)
-
+To complement the information, it is observe the distribution of the coffee shops according to rating.
 In this chart is posible to see the number of coffees and show that 500 hundred aprox. are in the rating of 93.0 points of rating,
 arround 450 coffees are in the rating 94.0 points and 300 coffes aporx are in the category of 92.0. From 95.0 to 98.0 are 270 coffees.
 
-Then grouping the diferent coffees by roast level with five categories that are shows below
+![image](https://user-images.githubusercontent.com/84011018/182369503-350e7693-92d2-4d43-83b4-5eb5d471c117.png)
 
-![image](https://user-images.githubusercontent.com/84011018/127637354-7ac884b9-ff9a-414c-bfd2-944851f27c50.png)
+### Distribution of coffees according to roast level
 
-In the next chart is show the count of coffees by roast level showing showing that arround 1200 coffees are in the classsfication of medium-Light Level
-and light and medium roast are arround 200 values.
+Now considering the roasting level, it can be observed that the distribution is mostly made up of medium-light roasted coffees and below are the other classifications, so it is understood that the market or the consumer prefers this type of coffee.
 
-![image](https://user-images.githubusercontent.com/84011018/127638362-166543e7-9c5c-4366-9044-3f658a878bcd.png)
+![image](https://user-images.githubusercontent.com/84011018/182391439-e11c57be-db29-4918-9f3f-ed34db2facf4.png)
 
-Then is analized the features of the coofees among them considered acidity, body and aftertaste. about this features is possible to see
-the cooffes with roast level medium-dark has a punctuaction of 9.0 points of 10.0 for body feature and acidity.
-Similar values are shoes for Medium roast level but in aftertaste feature has the higher cualification with 8.0 points of 10.0
+After this information, it is important to determine how many coffees found in the reviews correspond to each roasting level. It can be observed that about 1200 coffees correspond to the medium-light level. The levels corresponding to medium and light obtain a number of 300 to 200 coffees respectively. The medium-dark dark and very dark levels have a slight participation in the distribution.
 
-![image](https://user-images.githubusercontent.com/84011018/127638572-969ac3b7-e1a1-4999-be90-e80f4c486c77.png)
-
-![image](https://user-images.githubusercontent.com/84011018/127638938-a96176d2-f436-4429-a936-cb9db4577cd4.png)
-
-![image](https://user-images.githubusercontent.com/84011018/127638660-e8321619-14ed-4dad-abde-26d9e69e0f31.png)
-
-For last is showing the number of coffees brands for  Roaster company and is posible to see that tree roaster companies are in top with an ammount upper of one hundreds coffee brands. 
-
-![image](https://user-images.githubusercontent.com/84011018/127639240-dcc62276-9343-4989-b350-ceab394752b5.png)
-
-For more information about this topic you can see the followiing links
-
-https://github.com/Gungogit/coffee_review
-https://public.tableau.com/app/profile/fernando4052
+![image](https://user-images.githubusercontent.com/84011018/182391345-ec2540b7-d78d-4a2e-9466-ef7ee25f7e6b.png)
 
 
+### Top Companies in terms of Average Ratings
+
+Taking the average of the coffee rating grouped for each roaster it is possible to obtain the roasting companies that obtain the highest rating on the basis of the reviews. the folowing table show the roaster companies and is respectively ranking
+
+![image](https://user-images.githubusercontent.com/84011018/182383902-cf7d4e4f-7af3-45d8-819f-77d5359bf0fe.png)
+
+Another interesting point to analyze is the number of brands of coffee produced by each roasting company. In the graph it can be observed that the first three companies have >100 brands of coffee represented. Then the other companies, starting from the fourth position, have <60 brands of coffee.
+
+![image](https://user-images.githubusercontent.com/84011018/182386316-4a6c5d58-5961-496b-9d4a-0d0d7b47f698.png)
+
+### Properties of Coffee
+
+In terms of the classifications that stand out in the reviews such as aroma, flavor, body, acidity/structure and aftertaste, a clear pattern can be observed at the moment of classifying each property. The higher the classification, the higher the rating the coffee obtains.
+
+![image](https://user-images.githubusercontent.com/84011018/182389208-04bd60bd-b775-48b3-9333-3760ec4caccc.png)
+![image](https://user-images.githubusercontent.com/84011018/182389267-faa1d9a6-dace-4704-8fa5-a3198ab499d1.png)
+![image](https://user-images.githubusercontent.com/84011018/182389312-7f5dec75-afe6-4c3f-bddf-7565b6deab81.png)
+![image](https://user-images.githubusercontent.com/84011018/182389335-d1e6f351-3da9-4707-8ce6-d772229f8f49.png)
+
+### Location
+
+Grouping the information on the locations that produce the most coffee, it can be observed that the majority of the roasting companies are located in the United States according to the resensions.
+The location that produces the most coffees with a number of 130 coffees is located in Madison, Wisconsin, followed by Chia-Yi in Taiwan with 118 and then Sacramento California with 77 coffee brands.
+
+![image](https://user-images.githubusercontent.com/84011018/182395333-f57a03bb-c14a-4a2e-968c-a1c03dfeeb26.png)
 
 
 
