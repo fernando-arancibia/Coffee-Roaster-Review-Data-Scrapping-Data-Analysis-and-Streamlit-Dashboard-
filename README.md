@@ -1,4 +1,4 @@
-# Data scrapping, data analysis, and Streamlit dashboard for Coffee Roaster Review ☕
+# Data scrapping, Data Analysis, and Streamlit dashboard for Coffee Roaster Review ☕
 
 
 ## Introduction.🪂
