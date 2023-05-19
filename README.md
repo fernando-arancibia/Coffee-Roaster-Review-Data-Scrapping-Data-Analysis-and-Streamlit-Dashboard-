@@ -3,16 +3,76 @@
 
 ## Introduction.
 
-The following data analysis project is created to practice and gain more experience and knowledge in data analysis. For this project, everything begins with the collection of information that is extracted through the web scrapping method on the reviews of the different types of coffees that exist in the market, from a specific web page. 
-The main objective is to generate a data framework that allows us to obtain information on how these reviews are structured in order to classify the different brands of coffees. The information about the process is documented in the notebooks in this repository.
+This project aims to enhance data analysis skills by performing a comprehensive analysis of coffee roasters' reviews. The data is obtained through web scraping from a specific webpage. The project includes various stages such as data collection, data cleaning, and the creation of visualizations and a Streamlit interactive dashboard. This README file provides an overview of the project and its objectives.
 
 ## Objective.🎯
 
-- Realize data collection with data scrape method of relevant information about Coffee Market for diverses brand of coffees.
-- Clean and Wrangling the data fron data scrapping.
-- Built a data frame with the information selected for create visualization and dashboard.
+The main objectives of this project are:
+
+1.  Collect relevant information about the coffee market, specifically the reviews of       different coffee brands, through web scraping.
+2.  Clean and preprocess the scraped data to ensure its quality and suitability for         analysis.
+3.  Build a data framework that incorporates the selected information to create             visualizations and a Streamlit interactive dashboard.
 
 ## Methods.📝
+
+This project utilizes the following methods and tools:
+
+*   Web scraping: The data is collected by scraping information from a specific             webpage. Python is used for this task, along with the BeautifulSoup (bs4) library.
+*   Data cleaning and manipulation: The collected data is cleaned and processed using       the Pandas library, ensuring that it is in a suitable format for analysis.
+*   Data visualization: Matplotlib and Seaborn libraries are employed to create             visualizations that provide insights into the collected data.
+*   Streamlit: The Streamlit library is used to develop an interactive dashboard that       showcases the analysis and allows users to explore the data.
+
+## Project Workflow
+
+1.  Data Scraping:
+
+*   The project begins by creating the URL to extract information from the target webpage.
+*   A header function is created to access the information on the URL.
+*   The data is scraped by sending a GET request to the URL and using BeautifulSoup to extract the required information.
+*   The scraped links are stored in a list for further processing.
+
+2.  Data Extraction:
+
+*   The links obtained in the previous step are used to extract specific information for each review.
+*   BeautifulSoup is utilized to scrape the data for each link and store it in a DataFrame.
+
+3.  Data Cleaning and Preprocessing:
+
+*   The collected data is cleaned and processed to ensure its quality and suitability for analysis.
+*   Columns are created, dropped, or modified to improve the data structure.
+*   Currency values are standardized, and different units of measurement are converted to a common format.
+
+4.  Geographic Data Extraction:
+
+*   Geopy and Nominatim geocoder are used to extract the geographic coordinates for coffee roasters' locations.
+*   The extracted location coordinates are added to the DataFrame.
+
+5.  Descriptive Analysis:
+
+*   Descriptive analysis is performed on the cleaned and processed data.
+*   Statistical parameters, such as mean, standard deviation, and count, are calculated for relevant columns.
+
+## File Structure
+
+The repository contains the following files:
+
+*   data_scraper.py: Python script that performs web scraping to collect the coffee reviews.
+    data_cleaning.ipynb: Jupyter notebook documenting the data cleaning and preprocessing steps.
+*   descriptive_analysis.ipynb: Jupyter notebook presenting the descriptive analysis of the collected data.
+*   streamlit_app.py: Python script that utilizes Streamlit to create an interactive dashboard.
+*   requirements.txt: Text file specifying the Python dependencies required to run the project.
+*   README.md: Markdown file providing an overview of the project and instructions for setup and usage.
+*   Please refer to the Jupyter notebooks and Python scripts for more detailed code and analysis.
+
+## Usage
+
+To use this project, please follow these steps:
+
+1.  Clone the repository to your local machine or download the files.
+2.  Install the required dependencies by running pip install -r requirements.txt in your terminal.
+3.  Run the data_scraper.py
+
+## Code references
 
 This project project starts with obtaining data from a web page using data scraping and then storing it as a 'csv' file. The module/tool used for scrape was Python and the librarie use was Beautifulsoup(bs4), Pandas for data cleaning and manipulation, matplotlib and seaborn for data visualizations, and finally to create an app with a Streamlit interactive dashboard.
 
